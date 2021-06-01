@@ -16,13 +16,15 @@ class User(models.Model):
     # 真实姓名
     card_name = models.CharField(max_length=15,null=True)
     # 是否实名标识
-    real_type = models.IntegerField(max_length=2)
+    real_type = models.IntegerField()
     # 密码
     password = models.CharField(max_length=15)
     # 用户类别
-    user_type = models.IntegerField()
+    user_type = models.IntegerField(null=True)
     # 邮箱
     email = models.EmailField()
+    # 激活标识
+    activation_tag = models.IntegerField(null=True)
 
 
 
